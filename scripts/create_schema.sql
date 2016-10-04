@@ -1,0 +1,6 @@
+USE S00165159 
+GO
+CREATE SCHEMA myFirstSchema
+
+
+
