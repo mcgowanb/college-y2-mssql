@@ -1,9 +1,7 @@
-USE AdventureWorks2012;  
-GO  
-CREATE DEFAULT phonedflt AS 'unknown';  
+USE s00165159
+GO
+CREATE DEFAULT EmpAdd2Dflt AS 'Dublin'
 
-USE AdventureWorks2012;  
+USE s00165159
 GO  
-sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber'; 
-
-sp_bindefault 'phonedflt', '[schema].tableName.Column'; 
+sp_bindefault 'EmpAdd2Dflt',  '[exam1].EmployeeTBL.EmployeeAddress2' 
