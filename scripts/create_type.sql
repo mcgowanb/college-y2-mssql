@@ -1,0 +1,4 @@
+USE S00165159
+GO
+CREATE TYPE AddressLine1 
+FROM varchar(50);
