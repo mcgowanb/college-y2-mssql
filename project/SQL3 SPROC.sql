@@ -1,0 +1,7 @@
+USE S00165159SQLProject
+GO
+
+CREATE PROC SQL3
+AS
+SELECT COUNT(*) as total
+FROM ClientTbl
