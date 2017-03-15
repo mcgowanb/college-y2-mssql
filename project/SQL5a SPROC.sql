@@ -6,4 +6,3 @@ SELECT DISTINCT PremisesTbl.PremisesID, PremisesTbl.PremisesCity
 FROM
 PremisesTbl
 INNER JOIN PremisesAccountDetailsTbl ON PremisesTbl.PremisesID = PremisesAccountDetailsTbl.PremisesID
-WHERE PremisesAccountDetailsTbl.AlarmCharge > 0
