@@ -45,7 +45,8 @@ namespace proc_test
                 //cmd.Parameters.Add(new SqlParameter("@walltID", walletID));
 
                 //cmd.ExecuteNonQuery();
-                db.AssignTest(actionID, customerID, amount, walletID);
+                //db.AssignTest(actionID, customerID, amount, walletID);
+                db.Assign1(actionID, customerID, amount, walletID);
                
             }
             catch (Exception ex)
