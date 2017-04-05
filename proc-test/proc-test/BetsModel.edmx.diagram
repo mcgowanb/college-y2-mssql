@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cb152b4c84db4260840ec328edec32fe" Name="Diagram1">
+        <EntityTypeShape EntityType="S00165159TSQLProjectModel.action_tbl" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="S00165159TSQLProjectModel.bets_tbl" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="S00165159TSQLProjectModel.event_tbl" Width="1.5" PointX="1.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="S00165159TSQLProjectModel.member_tbl" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="S00165159TSQLProjectModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="S00165159TSQLProjectModel.transaction_tbl" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="S00165159TSQLProjectModel.transaction_type_tbl" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="S00165159TSQLProjectModel.wallet_tbl" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="S00165159TSQLProjectModel.FK_action_tbl_event_tbl" ManuallyRouted="false" />
+        <AssociationConnector Association="S00165159TSQLProjectModel.FK_bets_tbl_action_tbl" ManuallyRouted="false" />
+        <AssociationConnector Association="S00165159TSQLProjectModel.FK_bets_tbl_member_tbl" ManuallyRouted="false" />
+        <AssociationConnector Association="S00165159TSQLProjectModel.FK_wallet_tbl_member_tbl" ManuallyRouted="false" />
+        <AssociationConnector Association="S00165159TSQLProjectModel.FK_transaction_tbl_transaction_type_tbl" ManuallyRouted="false" />
+        <AssociationConnector Association="S00165159TSQLProjectModel.FK_transaction_tbl_wallet_tbl" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
