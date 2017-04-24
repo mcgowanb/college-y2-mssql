@@ -1,17 +1,21 @@
-ALTER PROC Assign1
+USE [S00165159TSQLProject]
+GO
+
+CREATE PROC [campus\S00165159].[Assign1]
 --external variables
 @ActionID int, @MemberID int, @BetAmount smallmoney, @WalletID int
 AS
 --internal variables
 DECLARE @Odds numeric(18,2), @NoOfBets int, @Balance smallmoney
 --get odds
+
 SELECT @Odds = Odds
 FROM action_tbl
 WHERE ActionID = @ActionID
 --no of bets
 SELECT @NoOfBets = COUNT(*) 
 FROM bets_tbl
-WHERE MemberID = @MemberID AND MONTH(BetDate) = MONTH(GETDATE())
+WHERE MemberID = @MemberID AND MONTH(BetDate) = MONTH(GETDATE()) AND YEAR(BetDate) = YEAR(GETDATE())
 -- wallet balance
 SELECT @Balance = Balance 
 FROM wallet_tbl
@@ -42,4 +46,5 @@ BEGIN CATCH
 ;THROW
 END CATCH
 --complete
-;THROW 50003, 'Order Inserted, Thank You',1
+
+;THROW 50003, 'Bet Inserted, Thank You',1
