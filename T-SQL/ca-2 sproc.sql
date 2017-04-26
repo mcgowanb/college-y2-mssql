@@ -42,11 +42,13 @@ BEGIN CATCH
 END CATCH
 --update wallet table
 BEGIN TRY
-UPDATE wallet_tbl SET Balance -= @BetAmount WHERE WalletID = @WalletID 
+UPDATE wallet_tbl 
+SET Balance -= @BetAmount 
+WHERE WalletID = @WalletID 
 END TRY
 BEGIN CATCH
 ;THROW
 END CATCH
 --complete
 
-;THROW 50003, 'Bet Inserted, Thank You',1
+RETURN 0
