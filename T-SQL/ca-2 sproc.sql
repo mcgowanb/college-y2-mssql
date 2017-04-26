@@ -1,7 +1,7 @@
 USE [S00165159TSQLProject]
 GO
 
-CREATE PROC [campus\S00165159].[Assign1]
+ALTER PROC [campus\S00165159].[Assign1]
 --external variables
 @ActionID int, @MemberID int, @BetAmount smallmoney, @WalletID int
 AS
@@ -15,7 +15,9 @@ WHERE ActionID = @ActionID
 --no of bets
 SELECT @NoOfBets = COUNT(*) 
 FROM bets_tbl
-WHERE MemberID = @MemberID AND MONTH(BetDate) = MONTH(GETDATE()) AND YEAR(BetDate) = YEAR(GETDATE())
+WHERE MemberID = @MemberID 
+AND MONTH(BetDate) = MONTH(GETDATE()) 
+AND YEAR(BetDate) = YEAR(GETDATE())
 -- wallet balance
 SELECT @Balance = Balance 
 FROM wallet_tbl
